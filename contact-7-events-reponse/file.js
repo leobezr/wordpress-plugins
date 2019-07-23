@@ -39,16 +39,19 @@
     })
 
     function deliver(download){
-      const p = document.createElement('p');
+      const p = document.createElement('div');
 
-      let content =   `<a href="${download}" download>`;
-      content +=  ' Faça o download do pdf aqui';
-      content +=  '</a>';
+      content +=   `<p>`;
+      content +=   `  <a href="${download}" download>`;
+      content +=   '    Faça o download do pdf aqui';
+      content +=   '  </a>';
+      content +=   '</p>';
 
       p.className = 'nestedElement';
       p.innerHTML = content;
 
-      jQuery('.conteudo').find('.contato p').eq(jQuery('.conteudo').find('.contato p').length-1).after(p);
+      jQuery('.conteudo').find('.contato').eq(jQuery('.conteudo').find('.contato').length).after(p);
+      jQuery('.conteudo').find('.contato').addClass('off');
       console.warn('Deliverd PDF')
     }
   })
