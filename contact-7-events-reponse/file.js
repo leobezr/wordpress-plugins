@@ -41,16 +41,16 @@
     function deliver(download){
       const p = document.createElement('div');
 
-      content +=   `<p>`;
-      content +=   `  <a href="${download}" download>`;
-      content +=   '    Faça o download do pdf aqui';
-      content +=   '  </a>';
-      content +=   '</p>';
+      let content =   `<p>`;
+      content +=      `  <a href="${download}" download>`;
+      content +=      '    Faça o download do pdf aqui';
+      content +=      '  </a>';
+      content +=      '</p>';
 
       p.className = 'nestedElement';
       p.innerHTML = content;
 
-      jQuery('.conteudo').find('.contato').eq(jQuery('.conteudo').find('.contato').length).after(p);
+      jQuery('.conteudo').find('.contato').after(p);
       jQuery('.conteudo').find('.contato').addClass('off');
       console.warn('Deliverd PDF')
     }
