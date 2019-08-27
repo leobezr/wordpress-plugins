@@ -1,4 +1,14 @@
 // !-- Cookie plugin
+!function(){
+  const cookieAviso = new CookieAviso();
+  window.cookieAviso = cookieAviso;
+
+  setTimeout(() => {
+    cookieAviso.generate();
+  }, 2000)
+}()
+
+
 class CookieAviso {
   constructor(){
     this.body = `
