@@ -40,7 +40,7 @@ class BlogApiBuilder {
       this.dat = dat.target;
       if ( !this.dat.length ) return
   
-      this.element = jQuery(this.dat);
+      this.element = $(this.dat);
       this.count = dat.count !== undefined ? dat.count : 10;
       this.maxExcerpt = dat.excerpt !== undefined ? dat.excerpt : 80;
   
@@ -82,8 +82,7 @@ class BlogApiBuilder {
       this.obliterate()
   
       let _link = link + '/wp-json/wp/v2/posts?_embed';
-      jQuery
-      .get(_link)
+      $.get(_link)
       .then(response => {
         this.fetched(response)
         return response
@@ -93,8 +92,8 @@ class BlogApiBuilder {
     doSlick = function(){
   
       $('.reciever.articles').slick({
-        // centerMode: true,
-        // centerPadding: '25px',
+        centerMode: true,
+        centerPadding: '40px',
         slidesToShow: 3,
         dots: true,
         autoplay: true,
@@ -157,12 +156,12 @@ class BlogApiBuilder {
         </div>
         `
   
-        if ( !jQuery('.wpb_text_column.reciever').hasClass('articles') ){
-          jQuery('.wpb_text_column.reciever')
+        if ( !$('.wpb_text_column.reciever').hasClass('articles') ){
+          $('.wpb_text_column.reciever')
           .addClass('articles')
           .html(postBody)
         } else {
-          jQuery('.wpb_text_column.reciever')
+          $('.wpb_text_column.reciever')
           .append(postBody)
         }
       })
