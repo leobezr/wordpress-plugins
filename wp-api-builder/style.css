@@ -1,0 +1,76 @@
+/**
+*
+* Blog Post via API
+*/
+.post_wrap .btn-blog {
+    padding: 12px 20px;
+    background: #004070;
+    color: #fff;
+    margin-top: 20px;
+    display: inline-block;
+    text-decoration: none !important;
+  }
+  
+  .post_wrap .btn-blog:hover {
+    background: #1a5f92;
+  }
+  
+  .lds-dual-ring {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+  }
+
+  .lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 46px;
+    height: 46px;
+    margin: 1px;
+    border-radius: 50%;
+    border: 5px solid #004070;
+    border-color: rgb(0, 64, 112) transparent #004070 transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+  }
+  
+  .wpb_text_column.reciever:not(.articles) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .wpb_text_column.reciever.articles:not(.slick-slider) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+  }
+  
+  .articles.reciever {
+    margin-bottom: 120px;
+  }
+  
+  .articles img {
+    width: 100%;
+    height: auto !important;
+    display: block;
+    margin-bottom: 10px !important;
+  }
+  
+  .articles.reciever h3 {
+    line-height: 1.2em !important;
+    font-size: 1em;
+    font-weight: 500 !important;
+    margin-bottom: 20px !important;
+    color: #004070;
+  }
+  
+  
+  .articles.reciever .post_wrap {
+    padding: 0 5px 0px 5px;
+  }
+  
+  .articles.reciever .post_wrap .post-footer {
+    padding-bottom: 30px;
+    border-bottom: solid 3px #004070 !important;
+  }
