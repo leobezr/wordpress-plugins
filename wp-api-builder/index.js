@@ -1,6 +1,6 @@
 // **
 // * WP - Buscar posts por API
-// * Versão: 1.0.0
+// * Versão: 1.0.1
 // * 
 // * 
 // * Como usar:
